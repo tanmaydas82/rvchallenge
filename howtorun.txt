@@ -1,0 +1,6 @@
+Steps :
+1. Install Java 8
+2. Install MySql server 5.6
+3. Set the root user password in mysql as password.
+4. from the command line :
+	java -jar tour-0.0.1-SNAPSHOT.jar  
