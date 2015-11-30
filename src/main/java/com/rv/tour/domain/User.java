@@ -1,9 +1,6 @@
 package com.rv.tour.domain;
 
-import javax.annotation.Generated;
 import javax.persistence.*;
-
-import java.util.Date;
 
 @Entity
 @Table(name="user")
@@ -20,10 +17,10 @@ public class User {
     @Column(name = "last_name")
     private String lastName;
 
-    @Column(name = "login_id")
-    private String loginId;
+    @Column(name = "username")
+    private String userName;
 
-    @Column(name = "passwd")
+    @Column(name = "password")
     private String password;
 
     public User() {
@@ -35,7 +32,7 @@ public class User {
                 String password) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.loginId = loginId;
+        this.userName = loginId;
         this.password = password;
     }
 
@@ -63,12 +60,12 @@ public class User {
         this.lastName = lastName;
     }
 
-    public String getLoginId() {
-        return loginId;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setLoginId(String loginId) {
-        this.loginId = loginId;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getPassword() {
@@ -85,7 +82,7 @@ public class User {
                 "Id=" + Id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", loginId='" + loginId + '\'' +
+                ", userName='" + userName + '\'' +
                 ", password='" + password + '\'' +
                 '}';
     }

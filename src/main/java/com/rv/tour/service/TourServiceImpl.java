@@ -8,6 +8,8 @@ import com.rv.tour.repository.CityRepository;
 import com.rv.tour.repository.StateRepository;
 import com.rv.tour.repository.UserRepository;
 import com.rv.tour.repository.VisitRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -16,6 +18,8 @@ import java.util.stream.Collectors;
 
 @Component
 public class TourServiceImpl implements TourService {
+
+    private static Logger logger = LoggerFactory.getLogger(TourServiceImpl.class);
 
     @Autowired
     private CityRepository cityRepository;
@@ -84,12 +88,14 @@ public class TourServiceImpl implements TourService {
 
     @Override
     public List<State> getStatesVisitedByAUser(Long userId) {
+        logger.info("Inside getStatesVisitedByAUser with userId : {}", userId);
         User user = userRepository.findOne(userId);
-        List<Visit> cities = visitRepository.findByUser(user);
+        List<Visit> visits = visitRepository.findByUser(user);
 
         Set<Long> keys = new HashSet<>();
         List<State> states = new LinkedList<>();
-        cities.stream().forEach(visit -> {
+        visits.stream().forEach(visit -> {
+            logger.info("visit : {}", visit);
             if( !keys.contains(visit.getCity().getState().getId()) ) {
                 keys.add(visit.getCity().getState().getId());
                 states.add(visit.getCity().getState());

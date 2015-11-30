@@ -9,6 +9,7 @@ import com.rv.tour.repository.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
 
 import javax.transaction.Transactional;
@@ -34,8 +35,8 @@ public class InternalServiceImpl implements InternalService {
 
     @Override
     public void saveUser(String firstName, String lastName) {
-        String password = EncryptionHelper
-                .get_SHA_256_SecurePassword(firstName+lastName+"@tour.com");
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+        String password = encoder.encode(firstName+lastName+"@tour.com");
         User user = new User(firstName,
                     lastName,
                     firstName.substring(0,2) + lastName.substring(0,2),

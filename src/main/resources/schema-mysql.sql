@@ -12,8 +12,8 @@ create table user (
   user_id int UNSIGNED not null auto_increment,
   first_name varchar(100),
   last_name varchar(100),
-  login_id varchar(50) not null unique,
-  passwd varchar(200) not null,
+  username varchar(50) not null unique,
+  password varchar(200) not null,
   primary key (user_id)
 );
 

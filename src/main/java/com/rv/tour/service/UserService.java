@@ -8,5 +8,5 @@ import org.springframework.beans.factory.annotation.Autowired;
  * Created by Tdas on 11/29/15.
  */
 public interface UserService {
-    User findById(Long userId);
+    User findUserByUserName(String userName);
 }

@@ -8,9 +8,13 @@ import com.rv.tour.domain.Visit;
 import com.rv.tour.rest.tranformer.CityTransformer;
 import com.rv.tour.rest.tranformer.VisitTransformer;
 import com.rv.tour.service.TourService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -19,12 +23,17 @@ import java.util.Map;
 @RestController
 public class TourController {
 
+    private static Logger logger = LoggerFactory.getLogger(TourController.class);
+
     @Autowired
     private TourService tourService;
 
+   // @PreAuthorize("hasAuthority('ROLE_USER')")
     @RequestMapping(value="/user/{userId}/visits", method = RequestMethod.POST)
     public ResponseEntity<?> createVisitedCity(@PathVariable("userId") Long userId,
                                                @RequestBody Map<String, String> cityAndState) {
+
+        logger.info("Inside createVisitedCity : {}", userId);
 
         String city = cityAndState.get("city");
         String state = cityAndState.get("state");
@@ -38,9 +47,13 @@ public class TourController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
+   // @PreAuthorize("hasAuthority('ROLE_USER')")
     @RequestMapping(value="/user/{userId}/visit/{visitId}", method = RequestMethod.DELETE)
     public ResponseEntity<?>  removeAPlaceVisitedByAUser(@PathVariable("userId") Long userId,
                                       @PathVariable("visitId") Long visitId) {
+
+        logger.info("Inside removeAPlaceVisitedByAUser : {}", userId);
+
         if( !tourService.verifyUserById(userId) ) {
             throw new ResourceNotFoundException("User with id " + userId + " not found.");
         }
