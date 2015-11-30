@@ -27,59 +27,59 @@ public class TourApplication implements CommandLineRunner {
     @Override
     public void run(String... strings) throws Exception {
         //Get scanner instance
-//        Scanner scanner = null;
-//        try {
-//            scanner = new Scanner(new File("./data/User.csv"));
-//        } catch (FileNotFoundException e) {
-//            e.printStackTrace();
-//        }
-//        boolean firstLine = true;
-//
-//        while(scanner.hasNext()) {
-//            if(firstLine) {
-//                scanner.nextLine();
-//                firstLine = false;
-//            }
-//            String line = scanner.nextLine();
-//            String[] fragments = line.split(",");
-//            internalService.saveUser(fragments[0], fragments[1]);
-//        }
-//
-//        try {
-//            scanner = new Scanner(new File("./data/State.csv"));
-//        } catch (FileNotFoundException e) {
-//            e.printStackTrace();
-//        }
-//        firstLine = true;
-//
-//        while(scanner.hasNext()) {
-//            if(firstLine) {
-//                scanner.nextLine();
-//                firstLine = false;
-//            }
-//            String line = scanner.nextLine();
-//            String[] fragments = line.split(",");
-//            internalService.saveState(fragments[0], fragments[1]);
-//        }
-//
-//        try {
-//            scanner = new Scanner(new File("./data/City.csv"));
-//        } catch (FileNotFoundException e) {
-//            e.printStackTrace();
-//        }
-//        firstLine = true;
-//
-//        while(scanner.hasNext()) {
-//            if(firstLine) {
-//                scanner.nextLine();
-//                firstLine = false;
-//            }
-//            String line = scanner.nextLine();
-//            String[] fragments = line.split(",");
-//            internalService.saveCity(fragments[0], Long.parseLong(fragments[1]),
-//                    Double.parseDouble(fragments[3]), Double.parseDouble(fragments[4]), fragments[2]);
-//        }
-//
-//        scanner.close();
+        Scanner scanner = null;
+        try {
+            scanner = new Scanner(new File("./data/User.csv"));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        boolean firstLine = true;
+
+        while(scanner.hasNext()) {
+            if(firstLine) {
+                scanner.nextLine();
+                firstLine = false;
+            }
+            String line = scanner.nextLine();
+            String[] fragments = line.split(",");
+            internalService.saveUser(fragments[0], fragments[1]);
+        }
+
+        try {
+            scanner = new Scanner(new File("./data/State.csv"));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        firstLine = true;
+
+        while(scanner.hasNext()) {
+            if(firstLine) {
+                scanner.nextLine();
+                firstLine = false;
+            }
+            String line = scanner.nextLine();
+            String[] fragments = line.split(",");
+            internalService.saveState(fragments[0], fragments[1]);
+        }
+
+        try {
+            scanner = new Scanner(new File("./data/City.csv"));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        firstLine = true;
+
+        while(scanner.hasNext()) {
+            if(firstLine) {
+                scanner.nextLine();
+                firstLine = false;
+            }
+            String line = scanner.nextLine();
+            String[] fragments = line.split(",");
+            internalService.saveCity(fragments[0], Long.parseLong(fragments[1]),
+                    Double.parseDouble(fragments[3]), Double.parseDouble(fragments[4]), fragments[2]);
+        }
+
+        scanner.close();
     }
 }
