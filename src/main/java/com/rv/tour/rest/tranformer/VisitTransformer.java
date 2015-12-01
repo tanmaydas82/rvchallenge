@@ -24,7 +24,7 @@ public class VisitTransformer {
 
         for(Visit visit : visits) {
             restVisits.add(new RestVisit(visit.getId(), visit.getCity().getCityName(),
-                    visit.getCity().getLongitude(), visit.getCity().getLatitude()));
+                    visit.getCity().getLongitude(), visit.getCity().getLatitude(), visit.getCity().getState().getStateName()));
         }
 
         return restVisits;

@@ -11,6 +11,8 @@ import com.rv.tour.repository.VisitRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Component;
 
 import java.util.*;
@@ -73,6 +75,12 @@ public class TourServiceImpl implements TourService {
     public List<City> getCitiesInAState(Long stateId) {
         State state = stateRepository.findOne(stateId);
         return cityRepository.findByState(state);
+    }
+
+    @Override
+    public Page<City> getCitiesInAState(Long stateId, Pageable pageable) {
+        State state = stateRepository.findOne(stateId);
+        return cityRepository.findByState(state, pageable);
     }
 
     @Override

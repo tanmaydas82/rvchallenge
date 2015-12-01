@@ -11,6 +11,8 @@ import com.rv.tour.service.TourService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.annotation.Secured;
@@ -28,7 +30,7 @@ public class TourController {
     @Autowired
     private TourService tourService;
 
-   // @PreAuthorize("hasAuthority('ROLE_USER')")
+    @PreAuthorize("hasAuthority('ROLE_USER')")
     @RequestMapping(value="/user/{userId}/visits", method = RequestMethod.POST)
     public ResponseEntity<?> createVisitedCity(@PathVariable("userId") Long userId,
                                                @RequestBody Map<String, String> cityAndState) {
@@ -47,7 +49,7 @@ public class TourController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-   // @PreAuthorize("hasAuthority('ROLE_USER')")
+    @PreAuthorize("hasAuthority('ROLE_USER')")
     @RequestMapping(value="/user/{userId}/visit/{visitId}", method = RequestMethod.DELETE)
     public ResponseEntity<?>  removeAPlaceVisitedByAUser(@PathVariable("userId") Long userId,
                                       @PathVariable("visitId") Long visitId) {
@@ -85,11 +87,11 @@ public class TourController {
     }
 
     @RequestMapping(value = "/state/{stateId}/cities", method= RequestMethod.GET)
-    public ResponseEntity<?> getCitiesInAState(@PathVariable("stateId") Long stateId) {
+    public ResponseEntity<?> getCitiesInAState(@PathVariable("stateId") Long stateId, Pageable pageable) {
         if( !tourService.verifyStateId(stateId)) {
             throw new ResourceNotFoundException("State with id " + stateId + " not found.");
         }
-        List<City> cities =  tourService.getCitiesInAState(stateId);
+        Page<City> cities =  tourService.getCitiesInAState(stateId, pageable);
         return new ResponseEntity<>(CityTransformer.transform(cities), null, HttpStatus.OK);
     }
 

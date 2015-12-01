@@ -4,10 +4,14 @@ import com.rv.tour.domain.City;
 import com.rv.tour.domain.State;
 import com.rv.tour.domain.User;
 import com.rv.tour.domain.Visit;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 
 public interface TourService {
+
+    Page<City> getCitiesInAState(Long stateId, Pageable pageable);
 
     List<City> getCitiesInAState(Long stateId);
 

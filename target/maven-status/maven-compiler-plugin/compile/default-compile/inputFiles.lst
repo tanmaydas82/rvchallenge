@@ -16,10 +16,14 @@
 /Users/Tdas/rvchallenge/src/main/java/com/rv/tour/service/TourService.java
 /Users/Tdas/rvchallenge/src/main/java/com/rv/tour/rest/model/RestState.java
 /Users/Tdas/rvchallenge/src/main/java/com/rv/tour/service/TourServiceImpl.java
+/Users/Tdas/rvchallenge/src/main/java/com/rv/tour/service/UserDetailsImpl.java
 /Users/Tdas/rvchallenge/src/main/java/com/rv/tour/service/InternalService.java
 /Users/Tdas/rvchallenge/src/main/java/com/rv/tour/rest/model/RestVisit.java
+/Users/Tdas/rvchallenge/src/main/java/com/rv/tour/security/config/SecurityConfig.java
 /Users/Tdas/rvchallenge/src/main/java/com/rv/tour/rest/tranformer/StateTranformer.java
+/Users/Tdas/rvchallenge/src/main/java/com/rv/tour/service/UserService.java
 /Users/Tdas/rvchallenge/src/main/java/com/rv/tour/rest/tranformer/VisitTransformer.java
 /Users/Tdas/rvchallenge/src/main/java/com/rv/tour/Exception/ResourceNotFoundException.java
 /Users/Tdas/rvchallenge/src/main/java/com/rv/tour/repository/UserRepository.java
+/Users/Tdas/rvchallenge/src/main/java/com/rv/tour/service/UserServiceImpl.java
 /Users/Tdas/rvchallenge/src/main/java/com/rv/tour/domain/Visit.java

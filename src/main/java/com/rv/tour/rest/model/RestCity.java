@@ -9,15 +9,17 @@ public class RestCity {
     private String name;
     private Double longitude;
     private Double latitude;
+    private String state;
 
     public RestCity() {
     }
 
-    public RestCity(Long id, String name, Double longitude, Double latitude) {
+    public RestCity(Long id, String name, Double longitude, Double latitude, String state) {
         Id = id;
         this.name = name;
         this.longitude = longitude;
         this.latitude = latitude;
+        this.state = state;
     }
 
     public Long getId() {
@@ -50,5 +52,13 @@ public class RestCity {
 
     public void setLatitude(Double latitude) {
         this.latitude = latitude;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
     }
 }

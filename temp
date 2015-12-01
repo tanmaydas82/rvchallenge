@@ -1,0 +1,83 @@
+### DISPLAYING THE CITIES IN STATE 1 AK ###
+
+
+
+[{"name":"Akron","longitude":-87.743989,"latitude":32.87802,"id":1},{"name":"Huntsville","longitude":-86.584979,"latitude":34.729135,"id":2},{"name":"Addison","longitude":-87.181384,"latitude":34.202175,"id":3},{"name":"Montgomery","longitude":-86.300629,"latitude":32.38012,"id":4},{"name":"Birmingham","longitude":-86.811504,"latitude":33.520295,"id":5},{"name":"Somerville","longitude":-86.799394,"latitude":34.471155,"id":6},{"name":"Albertville","longitude":-86.207944,"latitude":34.269515,"id":7},{"name":"Alexander City","longitude":-85.95295,"latitude":32.938845,"id":8},{"name":"Alexandria","longitude":-85.892347,"latitude":33.76698,"id":9},{"name":"Aliceville","longitude":-88.153104,"latitude":33.12943,"id":10},{"name":"Irvington","longitude":-88.222122,"latitude":30.514973,"id":11},{"name":"Andalusia","longitude":-86.495424,"latitude":31.319599,"id":12},{"name":"Anniston","longitude":-85.819449,"latitude":33.65711,"id":13},{"name":"Oneonta","longitude":-86.472939,"latitude":33.948315,"id":14},{"name":"Arab","longitude":-86.49535,"latitude":34.322876,"id":15},{"name":"Ashford","longitude":-85.234823,"latitude":31.187665,"id":16},{"name":"Ashville","longitude":-86.254749,"latitude":33.83651,"id":17},{"name":"Athens","longitude":-86.971279,"latitude":34.8045,"id":18},{"name":"Auburn","longitude":-85.481735,"latitude":32.607465,"id":19},{"name":"Prattville","longitude":-86.450749,"latitude":32.461855,"id":20}]
+
+
+### DISPLAYING THE CITIES IN STATE 2 AL ###
+
+
+
+[{"name":"Adak","longitude":-176.657569,"latitude":51.88001,"id":219},{"name":"Akhiok","longitude":-154.169998,"latitude":56.945599,"id":220},{"name":"Akiak","longitude":-161.223451,"latitude":60.909659,"id":221},{"name":"Kasigluk","longitude":-162.517124,"latitude":60.895273,"id":222},{"name":"Akutan","longitude":-165.770554,"latitude":54.134725,"id":223},{"name":"Wainwright","longitude":-160.023794,"latitude":70.6439,"id":224},{"name":"Alakanuk","longitude":-164.665094,"latitude":62.687155,"id":225},{"name":"Tok","longitude":-142.983804,"latitude":63.33567,"id":226},{"name":"Sand Point","longitude":-160.491806,"latitude":55.337009,"id":227},{"name":"Allakaket","longitude":-152.652498,"latitude":66.564032,"id":228},{"name":"Anchorage","longitude":-149.858384,"latitude":61.21755,"id":229},{"name":"Ambler","longitude":-157.857009,"latitude":67.08621,"id":230},{"name":"Anderson","longitude":-149.178329,"latitude":64.343582,"id":231},{"name":"St. Mary's","longitude":-163.178908,"latitude":62.050328,"id":232},{"name":"Nulato","longitude":-158.114749,"latitude":64.73324,"id":233},{"name":"Angoon","longitude":-134.582302,"latitude":57.502146,"id":234},{"name":"Aniak","longitude":-159.568004,"latitude":61.581385,"id":235},{"name":"Elim","longitude":-162.256079,"latitude":64.61583,"id":236},{"name":"Nunapitchuk","longitude":-162.452686,"latitude":60.897058,"id":237},{"name":"St. Michael","longitude":-162.052059,"latitude":63.473476,"id":238}]
+
+
+### DISPLAYING THE CITIES IN STATE 3 AZ ###
+
+
+
+[{"name":"Mesa","longitude":-111.831459,"latitude":33.417045,"id":410},{"name":"Phoenix","longitude":-112.075774,"latitude":33.44826,"id":411},{"name":"Avondale","longitude":-112.349664,"latitude":33.4405,"id":412},{"name":"Mohave Valley","longitude":-114.597859,"latitude":34.92384,"id":413},{"name":"Whiteriver","longitude":-109.964934,"latitude":33.834865,"id":414},{"name":"Tucson","longitude":-110.969754,"latitude":32.221553,"id":415},{"name":"Wellton","longitude":-114.147167,"latitude":32.672722,"id":416},{"name":"Apache Junction","longitude":-111.546119,"latitude":33.42314,"id":417},{"name":"Glendale","longitude":-112.186279,"latitude":33.53858,"id":418},{"name":"Ash Fork","longitude":-112.481424,"latitude":35.2239,"id":419},{"name":"Yuma","longitude":-114.624614,"latitude":32.68485,"id":420},{"name":"Sells","longitude":-111.889154,"latitude":31.916466,"id":421},{"name":"Chandler","longitude":-111.840829,"latitude":33.303385,"id":422},{"name":"Benson","longitude":-110.298684,"latitude":31.968784,"id":423},{"name":"Bisbee","longitude":-109.914459,"latitude":31.441823,"id":424},{"name":"Lakeside","longitude":-109.950882,"latitude":34.136219,"id":425},{"name":"Bowie","longitude":-109.486909,"latitude":32.326695,"id":426},{"name":"Prescott Valley","longitude":-112.322906,"latitude":34.585999,"id":427},{"name":"Sierra Vista","longitude":-110.274679,"latitude":31.56945,"id":428},{"name":"Camp Verde","longitude":-111.853554,"latitude":34.562045,"id":429}]
+
+
+### ADDING TOUR DATA FOR USER 2 JOHN SMITH ###
+
+
+
+{"timestamp":1448938622239,"status":401,"error":"Unauthorized","message":"Full authentication is required to access this resource","path":"/user/2/visits"}
+
+
+{"timestamp":1448938622246,"status":401,"error":"Unauthorized","message":"Full authentication is required to access this resource","path":"/user/2/visits"}
+
+
+{"timestamp":1448938622252,"status":401,"error":"Unauthorized","message":"Full authentication is required to access this resource","path":"/user/2/visits"}
+
+
+{"timestamp":1448938622258,"status":401,"error":"Unauthorized","message":"Full authentication is required to access this resource","path":"/user/2/visits"}
+
+
+### ADDING TOUR DATA FOR USER 4 Jose Gonzales ###
+
+
+
+{"timestamp":1448938622264,"status":401,"error":"Unauthorized","message":"Full authentication is required to access this resource","path":"/user/4/visits"}
+
+
+{"timestamp":1448938622271,"status":401,"error":"Unauthorized","message":"Full authentication is required to access this resource","path":"/user/4/visits"}
+
+
+{"timestamp":1448938622278,"status":401,"error":"Unauthorized","message":"Full authentication is required to access this resource","path":"/user/4/visits"}
+
+
+{"timestamp":1448938622285,"status":401,"error":"Unauthorized","message":"Full authentication is required to access this resource","path":"/user/4/visits"}
+
+
+### LISTING THE CITIES VISITED BY USER 2 JOHN SMITH ###
+
+
+
+
+
+
+### LISTING THE STATES VISITED BY USER 2 JOHN SMITH ###
+
+
+
+[]
+
+
+### LISTING THE CITIES VISITED BY USER 4 JOSH GONZALES ###
+
+
+
+
+
+
+### LISTING THE STATES VISITED BY USER 4 JOSH GONZALES ###
+
+
+
+[]
+
+
+####PAGING###
+[{"name":"Akron","longitude":-87.743989,"latitude":32.87802,"id":1},{"name":"Huntsville","longitude":-86.584979,"latitude":34.729135,"id":2}]

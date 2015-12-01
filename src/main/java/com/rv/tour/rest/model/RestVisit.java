@@ -9,15 +9,17 @@ public class RestVisit {
     private String place;
     private Double longitude;
     private Double latitude;
+    private String state;
 
     public RestVisit() {
     }
 
-    public RestVisit(Long id, String place, Double longitude, Double latitude) {
+    public RestVisit(Long id, String place, Double longitude, Double latitude, String state) {
         Id = id;
         this.place = place;
         this.longitude = longitude;
         this.latitude = latitude;
+        this.state = state;
     }
 
     public Long getId() {
@@ -50,5 +52,13 @@ public class RestVisit {
 
     public void setLatitude(Double latitude) {
         this.latitude = latitude;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
     }
 }
