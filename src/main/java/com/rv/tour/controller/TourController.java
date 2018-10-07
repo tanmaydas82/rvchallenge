@@ -31,7 +31,7 @@ public class TourController {
     private TourService tourService;
 
     @PreAuthorize("hasAuthority('ROLE_USER')")
-    @RequestMapping(value="/user/{userId}/visits", method = RequestMethod.POST)
+    @RequestMapping(value="/user/{userId}/visits/", method = RequestMethod.POST)
     public ResponseEntity<?> createVisitedCity(@PathVariable("userId") Long userId,
                                                @RequestBody Map<String, String> cityAndState) {
 
